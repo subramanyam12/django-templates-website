@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/banner/b1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/banner/b2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/banner/b3.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+{% endblock banner %}
+
+{% block information %}
+<div class="container">
+<div class="row bg-success text-center p-5 text-white border-bottom shadow">
+  <h1>Products</h1>
+        Dodla Dairy Limited is a public limited company having its registered and corporate office at Hyderabad City of
+        Telangana State in India. The company was incorporated in the year 1995 and production commenced in 1998. Currently,
+        Our procurement is centered in 5 states and our products are available for purchase in 11 states. We have 110 milk
+        chilling centers. Some of our plants are ISO 22000:2005 Certified while two are ISO 50001:2011 (EnMS) Certified.
+</div>
+</div>
+<br>
+{% endblock information %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Dairy Products</h2>
+  <div class="row container">
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+     <div class="goodnessec buttermilk smbg">
+        <a href="{% url 'category' 'GH'%}">
+            <div class="goodnessecont text-center">
+                <img src="{% static 'images/buffalo-ghee.png'%}" class="img-responsive center-block" alt="">
+                <p class="wikpro">buffalo-ghee</p>
+            </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+        <div class="goodnessec buttermilk smbg">
+            <a href="{% url 'category' 'IC'%}">
+                <div class="goodnessecont text-center">
+                    <img src="{% static 'images/icbars.png'%}" class="img-responsive center-block" alt="">
+                    <p class="wikpro">Ice Cream</p>
+                </div>
+            </a>
+        </div>
+    </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnessec buttermilk smbg">
+                <a href="{% url 'category' 'ML'%}">
+                    <div class="goodnessecont text-center">
+                        <img src="{% static 'images/cow-milk.png'%}" class="img-responsive center-block" alt="">
+                        <p class="wikpro">milk</p>
+                    </div>
+                </a>
+           </div>
+        </div>
+    </div>
+ </div>
+ <div class="row container">
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+     <div class="goodnessec buttermilk smbg">
+        <a href="{% url 'category' 'CD'%}">
+            <div class="goodnessecont text-center">
+                <img src="{% static 'images/curd-total.png'%}" class="img-responsive center-block" alt="">
+                <p class="wikpro">Curd</p>
+            </div>
+        </a>
+     </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+        <div class="goodnessec buttermilk smbg">
+            <a href="{% url 'category' 'LS'%}">
+                <div class="goodnessecont text-center">
+                    <img src="{% static 'images/sweet-lassi.png'%}" class="img-responsive center-block" alt="">
+                    <p class="wikpro">Lassi</p>
+                </div>
+            </a>
+        </div>
+    </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnessec buttermilk smbg">
+                <a href="{% url 'category' 'PN'%}">
+                    <div class="goodnessecont text-center">
+                        <img src="{% static 'images/paneer-fresh.png'%}" class="img-responsive center-block" alt="">
+                        <p class="wikpro">Paneer</p>
+                    </div>
+                </a>
+           </div>
+        </div>
+    </div>
+ </div>
+  
+
+</div>
+{% endblock content %}

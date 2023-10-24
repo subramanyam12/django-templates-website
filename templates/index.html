@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block css %}<link rel='stylesheet' href='{% static "header.css" %}' />
+{% endblock  %}
+{% block main %}
+<header>
+    <a href='/'><img src="\media\ecommerce.png" alt="logo"></a>
+    {% block main %}
+    <nav>
+        <a href="login">Login</a>
+        <a href="register">Register</a>
+    </nav>
+    {% endblock main %}
+</header>
+<main>
+    {% block content %}
+    {% for m in messages  %}
+     <strong style='color:green;text-align:center'>{{m}}</strong>
+    {% endfor %}
+    <h1 style='font-size:7vw;text-shadow:4px 2px white;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);'>Welcome to<br> E-Commerce..</h1>
+    {% endblock content %}
+</main>
+{% endblock main %}
